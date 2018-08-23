@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formularios HTML</title>
+    <style>
+        form div{
+            margin-bottom: 1em;
+        }
+    </style>
 </head>
 <body>
     <h1>Formularios</h1>
@@ -20,9 +25,55 @@
         2. <button>Enviar</button> (alternativa)
         3. Presionar Enter dentro de un input
     -->
-    <form action="https://www.google.cl/search" method="get">
-        <input type="text" name="q">
-      
+    <form action="procesar.html">
+      <!--El campo más usado es el input. Hay muchos tipos de input que se distinguen con
+     el atributo type=""
+     Cada campo puede llevar una etiqueta <label for=""></label>.
+     El valor del atributo for debe coincidir con el id del campo al que corresponde.-->
+     <!-- Para forzar saltos de linea se colocaran dentro de div las etiquetas(son elementos de linea)-->
+     <div>
+        <label for="nombres">Nombres y apellidos</label>
+        <input type="text" id="nombres">
+     </div>
+     <div>
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">checkbox 1</label>
+        <br>
+        <input type="checkbox" id="checkbox2">
+        <label for="checkbox2">checkbox 2</label>
+        <br>
+        <input type="checkbox" id="checkbox3">
+        <label for="checkbox3">checkbox 3</label> 
+        <br>
+        <input type="checkbox" id="checkbox4">
+        <label for="checkbox4">checkbox 4</label>
+     </div>
+     <div>
+        <input type="radio" id="radio1" name="radio">
+        <label for="radio1">radio 1</label>
+        <br>
+        <input type="radio" id="radio2" name="radio">
+        <label for="radio2">radio 2</label>
+        <br>
+        <input type="radio" id="radio3" name="radio">
+        <label for="radio3">radio 3</label> 
+        <br>
+        <input type="radio" id="radio4" name="radio">
+        <label for="radio4">radio 4</label>
+     </div>
+     <div>
+        <input type="radio" id="radio1" name="radio 2">
+        <label for="radio1">radio 1</label>
+        <br>
+        <input type="radio" id="radio2" name="radio 2">
+        <label for="radio2">radio 2</label>
+        <br>
+        <input type="radio" id="radio3" name="radio 2">
+        <label for="radio3">radio 3</label> 
+        <br>
+        <input type="radio" id="radio4" name="radio 2">
+        <label for="radio4">radio 4</label>
+         </div>
     </form>
 </body>
 </html>
