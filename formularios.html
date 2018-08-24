@@ -69,15 +69,25 @@
          Dibuja un area de varias columnas y filas para escribir texto.
         -->
         <div>
-         <label for="mensaje">Deje su mensaje</label>
-          <textarea name="mensaje" id="mensaje" cols="50" rows="5" 
-          readonly>Autorizo a esta página a vender mi información personal</textarea>
+            <label for="mensaje">Deje su mensaje</label>
+            <textarea name="mensaje" id="mensaje" cols="50" rows="5"></textarea>
         </div>
         <!--select
          Dibuja una lista desplegable de opciones, cada una con la etiqueta
-         <option>-->
-        <input type="submit" value="Enviar formulario">
-
+         <option>, el atributo value solo sirve para el lenguaje servidor no para 
+         HTML5-->
+         <div>
+            <label for="edad">Selecciona tu edad</label><br>
+            <select name="edad" id="edad">
+                <option value="0">Menos de 10 años</option>
+                <option value="1">De 10 a 20 años</option>
+                <option value="2">De 20 a 30 años</option>
+                <option value="3">Más de 30 años</option>
+            </select>
+         </div>
+         <div> 
+             <input type="submit" value="Enviar formulario">
+         </div>   
      
     </form>
 </body>
