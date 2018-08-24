@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,7 @@
      <!-- Para forzar saltos de linea se colocaran dentro de div las etiquetas(son elementos de linea)-->
      <div>
         <label for="nombres">Nombres y apellidos</label>
-        <input type="text" id="nombres">
+        <input type="text" id="nombres" name="">
      </div>
      <div>
         <input type="checkbox" id="checkbox1">
@@ -61,19 +61,24 @@
         <input type="radio" id="radio4" name="radio">
         <label for="radio4">radio 4</label>
      </div>
-     <div>
-        <input type="radio" id="radio1" name="radio 2">
-        <label for="radio1">radio 1</label>
-        <br>
-        <input type="radio" id="radio2" name="radio 2">
-        <label for="radio2">radio 2</label>
-        <br>
-        <input type="radio" id="radio3" name="radio 2">
-        <label for="radio3">radio 3</label> 
-        <br>
-        <input type="radio" id="radio4" name="radio 2">
-        <label for="radio4">radio 4</label>
-         </div>
+     <!--El atributo name no hace nada en html (salvo especificar un area de accion
+        para los input type="radio"). Sin embargo, todos los campos deberian llevar 
+        el atrinbuto name porque los lenguajes de backend los usan para extraerlos-->
+        
+        <!--textarea 
+         Dibuja un area de varias columnas y filas para escribir texto.
+        -->
+        <div>
+         <label for="mensaje">Deje su mensaje</label>
+          <textarea name="mensaje" id="mensaje" cols="50" rows="5" 
+          readonly>Autorizo a esta página a vender mi información personal</textarea>
+        </div>
+        <!--select
+         Dibuja una lista desplegable de opciones, cada una con la etiqueta
+         <option>-->
+        <input type="submit" value="Enviar formulario">
+
+     
     </form>
 </body>
 </html>
