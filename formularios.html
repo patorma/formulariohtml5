@@ -87,11 +87,36 @@
                 <option value="2">De 20 a 30 años</option>
                 <option value="3">Más de 30 años</option>
             </select>
-            <!-- El atributo valueno tiene utilidad en HTML, sin embargo es el
+            <!-- El atributo value no tiene utilidad en HTML, sin embargo es el
                 que lee el lenguaje de servidor. Por tanto, el contenido de <option>
                 </option> es el que muestra el navegador y no necesariamente debe coincidir
                 con el atributo value=""-->
          </div>
+         
+         <div>
+                <label for="edad2" class="block">Selecciona tu edad</label>
+                <!-- Podemos hacer que las opciones dentro de un select se agrupen con la
+                etiqueta <optgroup></optgroup>.
+                Con el atributo label="" le damos un nombre a cada grupo -->
+                <select name="edad" id="edad2">
+                    <optgroup label="Niños y jóvenes">
+                        <option value="0">Menos de 10 años</option>
+                        <option value="1">De 10 a 20 años</option>
+                    </optgroup>
+                    <optgroup label="Adultos"> 
+                        <option value="2">De 20 a 30 años</option>
+                         <option value="3">De 30 a 40 años</option>
+                        <option value="3">De 40 a 50 años</option>
+                        <option value="3">De 50 a 60 años</option>
+                    </optgroup>
+                    <optgroup label="Adultos mayores"> 
+                        <option value="3">Más de 60 años</option>
+                    </optgroup>
+                    
+                </select>
+              
+             </div>
+          
          <div> 
              <input type="submit" value="Enviar formulario">
          </div>   
