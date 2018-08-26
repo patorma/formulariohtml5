@@ -12,6 +12,9 @@
        .block{
             display:block;
         }
+        fieldset{
+            margin-bottom: 1em;
+        }
     </style>
 </head>
 <body>
@@ -34,10 +37,23 @@
      Cada campo puede llevar una etiqueta <label for=""></label>.
      El valor del atributo for debe coincidir con el id del campo al que corresponde.-->
      <!-- Para forzar saltos de linea se colocaran dentro de div las etiquetas(son elementos de linea)-->
-     <div>
-        <label for="nombres">Nombres y apellidos</label>
-        <input type="text" id="nombres" name="">
-     </div>
+     <fieldset>
+         <legend>Datos personales</legend>
+        <div>
+            <label for="nombres">Nombres y apellidos</label>
+            <input type="text" id="nombres" name="nombres">
+        </div>
+        <div>
+            <label for="correo">Correo electrónico</label>
+            <input type="text" id="correo" name="correo">
+        </div>
+        <div>
+            <label for="telefono">Telefono</label>
+            <input type="text" id="telefono" name="telefono">
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Preferencias</legend>
      <div>
         <input type="checkbox" id="checkbox1">
         <label for="checkbox1">checkbox 1</label>
@@ -64,17 +80,12 @@
         <input type="radio" id="radio4" name="radio">
         <label for="radio4">radio 4</label>
      </div>
+    </fieldset>
      <!--El atributo name no hace nada en html (salvo especificar un area de accion
         para los input type="radio"). Sin embargo, todos los campos deberian llevar 
         el atrinbuto name porque los lenguajes de backend los usan para extraerlos-->
-        
-        <!--textarea 
-         Dibuja un area de varias columnas y filas para escribir texto.
-        -->
-        <div>
-            <label for="mensaje">Deje su mensaje</label>
-            <textarea name="mensaje" id="mensaje" cols="50" rows="5"></textarea>
-        </div>
+       <fieldset>
+         <legend>Otra información</legend>
         <!--select
          Dibuja una lista desplegable de opciones, cada una con la etiqueta
          <option>, el atributo value solo sirve para el lenguaje servidor no para 
@@ -116,7 +127,18 @@
                 </select>
               
              </div>
-          
+              <!--textarea 
+         Dibuja un area de varias columnas y filas para escribir texto.
+        -->
+        <div>
+            <label for="mensaje" class="block">Deje su mensaje</label>
+            <textarea name="mensaje" id="mensaje" cols="50" rows="5"></textarea>
+        </div>
+    </fieldset>
+    <!--La etiqueta <fieldset></fieldset> agrupa campos. Y con la etiqueta <legend>
+    </legend> se asigna un nombre a cada grupo de campos-->
+  
+    <!--El input type="submit" envia el formulario-->
          <div> 
              <input type="submit" value="Enviar formulario">
          </div>   
